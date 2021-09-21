@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/testface/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/testface/static/js/main.ee8a8bdd.chunk.js",
-    "main.js.map": "/testface/static/js/main.ee8a8bdd.chunk.js.map",
+    "main.js": "/testface/static/js/main.bf21788f.chunk.js",
+    "main.js.map": "/testface/static/js/main.bf21788f.chunk.js.map",
     "runtime-main.js": "/testface/static/js/runtime-main.4fa164d7.js",
     "runtime-main.js.map": "/testface/static/js/runtime-main.4fa164d7.js.map",
     "static/js/2.eae86a53.chunk.js": "/testface/static/js/2.eae86a53.chunk.js",
@@ -12,12 +12,12 @@
     "index.html": "/testface/index.html",
     "static/css/main.6dea0f05.chunk.css.map": "/testface/static/css/main.6dea0f05.chunk.css.map",
     "static/js/2.eae86a53.chunk.js.LICENSE.txt": "/testface/static/js/2.eae86a53.chunk.js.LICENSE.txt",
-    "static/media/stoptoday.53f10cb2.glb": "/testface/static/media/stoptoday.53f10cb2.glb"
+    "static/media/stoptoday.0e3984bb.gltf": "/testface/static/media/stoptoday.0e3984bb.gltf"
   },
   "entrypoints": [
     "static/js/runtime-main.4fa164d7.js",
     "static/js/2.eae86a53.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.ee8a8bdd.chunk.js"
+    "static/js/main.bf21788f.chunk.js"
   ]
 }

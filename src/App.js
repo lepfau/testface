@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { Canvas } from "react-three-fiber";
-import facemodel from "../src/stoptoday.glb"
+import facemodel from "../src/stoptoday.gltf"
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import { HashRouter, Route, Switch } from "react-router-dom";
 

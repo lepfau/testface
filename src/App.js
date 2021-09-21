@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from "react";
+import { Canvas } from "react-three-fiber";
+import { OrbitControls, useGLTF } from "@react-three/drei";
+import { HashRouter, Route, Switch } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function Model(props) {
+  const { scene } = useGLTF("/finalface.glb");
+  return <primitive object={scene} />;
 }
 
-export default App;
+export default function App() {
+  return (
+    <HashRouter>
+    <Canvas style={{height:"100vh", backgroundColor:"black"}} pixelRatio={[1, 2]} camera={{ position: [-2, 0, 5], fov: 50 }}>
+      <ambientLight intensity={1} color={"lightyellow"} />
+      {/* <pointLight intensity={0.2} position={[1000, 10000, 10000]} /> */}
+      <Suspense fallback={null}>
+        <Model />
+      </Suspense>
+      <OrbitControls />
+    </Canvas>
+    </HashRouter>
+  );
+}

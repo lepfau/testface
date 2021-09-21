@@ -5,7 +5,7 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 import { HashRouter, Route, Switch } from "react-router-dom";
 
 function Model(props) {
-  const { scene } = useGLTF(facemodel);
+  const { scene } = useGLTF(facemodel, '/draco-gltf');
   
   return <primitive object={scene} />;
 }

@@ -5,7 +5,7 @@ import { OrbitControls, ContactShadows, Environment, useGLTF } from "@react-thre
 import background from "./340452.png"
 import { Html, useProgress } from '@react-three/drei'
 
-import facemodel from "./finalsmile.glb"
+import facemodel from "./finaldefinitive.glb"
 
 
 function Model(props) {

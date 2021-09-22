@@ -6,6 +6,7 @@ import {
   ContactShadows,
   Environment,
   useGLTF,
+  Detailed,
 } from "@react-three/drei";
 import background from "./340452.png";
 import { Html, useProgress } from "@react-three/drei";
@@ -14,12 +15,9 @@ import facemodel from "./thisistheone.glb";
 
 function Model(props) {
   const { scene } = useGLTF(facemodel);
-  return <primitive object={scene} position={[0, 0, 0]} />;
-}
-
-function Model2(props) {
-  const { scene2 } = useGLTF(facemodel);
-  return <primitive object={scene2} position={[2, 0, 0]} />;
+ return(
+    <primitive object={scene} position={[0,0,0]} />
+  )
 }
 
 function Loader() {
@@ -38,16 +36,17 @@ export default function App() {
           background: `no-repeat center/100% 100% url("https://lh3.googleusercontent.com/proxy/bdGa1NUkXeojFlpl2U0j8dasLIVUUVMCkwBbgRR6q0KrVTTPJsA-26jOceQHMdVRuGwGl2EsLQNYyFepWyfT-EYoF-XIQfqdfaBZ8pJmctkXRhgLl1sMLXt22F9JDlokLhZaSnnGT6bTUSyJ-Bj1kuDvKOvu9tzgXq-CsMM")`,
         }}
         pixelRatio={[1, 2]}
-        camera={{ position: [0, 0, 10], fov: 30 }}
+        camera={{ position: [0, 0, 10], fov: 30}}
       >
-        <ambientLight intensity={0.7} />
-        {/* <spotLight intensity={2} position={[20, 50, 100]} color={"lightyellow"}   aoMapIntensity={1} /> */}
+        <ambientLight intensity={0.3} />
+        {/* <spotLight intensity={1} position={[20, 50, 100]} color={"lightyellow"}   aoMapIntensity={1} /> */}
         {/* <pointLight intensity={1} position={[5, 5, 5]} decay={1} distance={300} shadow={1} color={"lightyellow"} /> */}
         <Suspense fallback={<Loader />}>
-          <Model />
-         
+          <Model/>
+          <Environment preset={'sunset'}/>
         </Suspense>
-        <OrbitControls />
+        <OrbitControls autoRotate = {true} autoRotateSpeed = {5} />
+       
       </Canvas>
     </HashRouter>
   );

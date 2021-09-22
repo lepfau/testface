@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/testface/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/testface/static/js/main.e6ead421.chunk.js",
-    "main.js.map": "/testface/static/js/main.e6ead421.chunk.js.map",
+    "main.js": "/testface/static/js/main.ab82619d.chunk.js",
+    "main.js.map": "/testface/static/js/main.ab82619d.chunk.js.map",
     "runtime-main.js": "/testface/static/js/runtime-main.44f1ee31.js",
     "runtime-main.js.map": "/testface/static/js/runtime-main.44f1ee31.js.map",
     "static/js/2.1cbe774e.chunk.js": "/testface/static/js/2.1cbe774e.chunk.js",
@@ -13,12 +13,12 @@
     "static/css/main.6dea0f05.chunk.css.map": "/testface/static/css/main.6dea0f05.chunk.css.map",
     "static/js/2.1cbe774e.chunk.js.LICENSE.txt": "/testface/static/js/2.1cbe774e.chunk.js.LICENSE.txt",
     "static/media/340452.2f7b53cf.png": "/testface/static/media/340452.2f7b53cf.png",
-    "static/media/finalsmile.96ac4484.glb": "/testface/static/media/finalsmile.96ac4484.glb"
+    "static/media/finaldefinitive.ff7845c0.glb": "/testface/static/media/finaldefinitive.ff7845c0.glb"
   },
   "entrypoints": [
     "static/js/runtime-main.44f1ee31.js",
     "static/js/2.1cbe774e.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.e6ead421.chunk.js"
+    "static/js/main.ab82619d.chunk.js"
   ]
 }

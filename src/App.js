@@ -9,7 +9,7 @@ import {
   Detailed,
 } from "@react-three/drei";
 import background from "./340452.png";
-import { Html, useProgress } from "@react-three/drei";
+import { Html, useProgress, Stage} from "@react-three/drei";
 import Model from "./Animationdeff";
 
 import ReactModel from "./React3dlogo"
@@ -43,12 +43,11 @@ const [doubt, setDoubt] = useState(false)
        <button onClick={() => {setDoubt(!doubt); setSmile(false); setMouth(false); setRock(false); setSad(false)}}>doubt</button>
 </div>
 
-      <Canvas powerPreference="high-performance"
-      
+      <Canvas 
         className="canvasstyle"
         style={{
           height: "100vh",
-          background: `no-repeat center/100% 100% url("https://lh3.googleusercontent.com/proxy/bdGa1NUkXeojFlpl2U0j8dasLIVUUVMCkwBbgRR6q0KrVTTPJsA-26jOceQHMdVRuGwGl2EsLQNYyFepWyfT-EYoF-XIQfqdfaBZ8pJmctkXRhgLl1sMLXt22F9JDlokLhZaSnnGT6bTUSyJ-Bj1kuDvKOvu9tzgXq-CsMM")`,
+          background: `no-repeat center/100% 100% url(${background})`,
         }}
         pixelRatio={[1, 2]}
      
@@ -56,15 +55,17 @@ const [doubt, setDoubt] = useState(false)
       >
        
         <ambientLight intensity={0.3} />
-        {/* <spotLight intensity={1} position={[20, 50, 100]} color={"lightyellow"}   aoMapIntensity={1} /> */}
+        {/* <spotLight intensity={0.5} position={[20, 50, 100]} color={"lightyellow"}   aoMapIntensity={1} /> */}
         {/* <pointLight intensity={1} position={[5, 5, 5]} decay={1} distance={300} shadow={1} color={"lightyellow"} /> */}
         <Suspense fallback={<Loader />}>
-   <group>
+    
+   <group >
           <Model smile={smile} mouth={mouth} rock={rock} sad={sad} doubt={doubt}/>
    <ReactModel scale={2} position={[-1, 0, 0]}/>
    <Jslogo />
    <Nodelogo/>
     </group>
+
           <Environment preset={'sunset'}/>
         </Suspense>
         <OrbitControls autoRotate = {false} autoRotateSpeed = {5} />

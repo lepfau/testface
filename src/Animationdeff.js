@@ -20,6 +20,7 @@ export default function Model({ ...props }) {
 
     if (props.smile === true) {
       actions.Smile.repetitions = 1;
+  
       actions.Smile.clampWhenFinished = true;
       actions.Smile.reset().fadeIn(0.5).play();
     } else {

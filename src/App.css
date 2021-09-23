@@ -26,11 +26,17 @@
 
 
 .btn_container {
-  height: 9vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: lightblue;
+  background: none;
+  /* margin-top: 50px; */
+  /* margin-bottom: 50px; */
+  position: absolute;
+  top: 5vh;
+  margin-left: 1vh;
+  z-index: 2;
+  width: 95vw;
 }
 
 button {

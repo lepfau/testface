@@ -10,12 +10,13 @@ import {
 } from "@react-three/drei";
 import background from "./340452.png";
 import { Html, useProgress, Stage} from "@react-three/drei";
-import Model from "./Animationdeff";
+import Model from "./Newanimate";
 
 import ReactModel from "./React3dlogo"
 import Jslogo from "./Jslogo"
 import Nodelogo from "./Nodelogo"
 import "./App.css";
+import Button from '@mui/material/Button';
 
 
 
@@ -34,15 +35,14 @@ const [doubt, setDoubt] = useState(false)
 
   return (
     <HashRouter>
-
+<div>
 <div className="btn_container">
-       <button onClick={() => {setSmile(!smile); setMouth(false); setRock(false); setSad(false); setDoubt(false)}}>smile</button>
-       <button onClick={() => {setMouth(!mouth); setSmile(false); setRock(false); setSad(false); setDoubt(false)}}>open mouth</button>
-       <button onClick={() => {setRock(!rock); setSmile(false); setMouth(false); setSad(false); setDoubt(false)}}>the rock</button>
-       <button onClick={() => {setSad(!sad); setSmile(false); setMouth(false); setRock(false); setDoubt(false)}}>sad</button>
-       <button onClick={() => {setDoubt(!doubt); setSmile(false); setMouth(false); setRock(false); setSad(false)}}>doubt</button>
+<Button  onClick={() => {setSmile(!smile); setMouth(false); setRock(false); setSad(false); setDoubt(false)}} variant="contained">Content</Button>
+<Button onClick={() => {setMouth(!mouth); setSmile(false); setRock(false); setSad(false); setDoubt(false)}} variant="contained">Choqué</Button>
+<Button onClick={() => {setRock(!rock); setSmile(false); setMouth(false); setSad(false); setDoubt(false)}}variant="contained">The Rock</Button>
+<Button onClick={() => {setSad(!sad); setSmile(false); setMouth(false); setRock(false); setDoubt(false)}}variant="contained">Triste</Button>
+<Button onClick={() => {setDoubt(!doubt); setSmile(false); setMouth(false); setRock(false); setSad(false)}}variant="contained">Doute</Button>
 </div>
-
       <Canvas 
         className="canvasstyle"
         style={{
@@ -68,9 +68,12 @@ const [doubt, setDoubt] = useState(false)
 
           <Environment preset={'sunset'}/>
         </Suspense>
-        <OrbitControls autoRotate = {false} autoRotateSpeed = {5} />
+        <OrbitControls autoRotate = {true} autoRotateSpeed = {0.2} />
      
       </Canvas>
+      
+
+</div>
     </HashRouter>
   );
 }

@@ -23,3 +23,19 @@
     transform: rotate(360deg);
   }
 }
+
+
+.btn_container {
+  height: 9vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: lightblue;
+}
+
+button {
+  height: 45px;
+  width: 100px;
+  border-radius: 6px;
+  font-weight: 600;
+}

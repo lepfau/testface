@@ -10,6 +10,7 @@ export default function Model({ ...props }) {
   const { nodes, materials, animations } = useGLTF(face)
   const { actions } = useAnimations(animations, group)
 
+
   useEffect(() => {
     if (props.mouth === true) {
       actions["Mouthopen.001"].repetitions = 1;
@@ -19,7 +20,6 @@ export default function Model({ ...props }) {
 
     if (props.smile === true) {
       actions.Smile.repetitions = 1;
-  
       actions.Smile.clampWhenFinished = true;
       actions.Smile.reset().fadeIn(0.5).play();
     } else {
@@ -53,14 +53,16 @@ export default function Model({ ...props }) {
   });
 
   return (
-    <group ref={group} {...props} dispose={null}>
-      <group position={[0, -0.5, 0.02]}>
+    <group ref={group} {...props} dispose={null} position={props.position} scale={1.3}>
+
         <mesh
+          
           name="FaceBuilderHead_mesh"
           geometry={nodes.FaceBuilderHead_mesh.geometry}
           material={materials.kt_facebuilder_material}
           morphTargetDictionary={nodes.FaceBuilderHead_mesh.morphTargetDictionary}
           morphTargetInfluences={nodes.FaceBuilderHead_mesh.morphTargetInfluences}
+
         />
         <mesh
           name="FaceBuilderHead_mesh_1"
@@ -69,7 +71,7 @@ export default function Model({ ...props }) {
           morphTargetDictionary={nodes.FaceBuilderHead_mesh_1.morphTargetDictionary}
           morphTargetInfluences={nodes.FaceBuilderHead_mesh_1.morphTargetInfluences}
         />
-      </group>
+    
     </group>
   )
 }

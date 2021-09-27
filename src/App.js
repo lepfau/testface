@@ -1,20 +1,10 @@
-import React, { Suspense, useRef, useState } from "react";
-import { HashRouter, Route, Switch } from "react-router-dom";
-import { Canvas, useFrame } from "@react-three/fiber";
-import {
-  OrbitControls,
-  ContactShadows,
-  Environment,
-  useGLTF,
-  Detailed,
-} from "@react-three/drei";
+import React, { Suspense, useState } from "react";
+import { HashRouter} from "react-router-dom";
+import { Canvas} from "@react-three/fiber";
+import {OrbitControls, Environment,} from "@react-three/drei";
 import background from "./340452.png";
-import { Html, useProgress, Stage} from "@react-three/drei";
+import { Html, useProgress} from "@react-three/drei";
 import Model from "./Newanimate";
-
-import ReactModel from "./React3dlogo"
-import Jslogo from "./Jslogo"
-import Nodelogo from "./Nodelogo"
 import "./App.css";
 import Button from '@mui/material/Button';
 
@@ -22,7 +12,7 @@ import Button from '@mui/material/Button';
 
 function Loader() {
   const { progress } = useProgress();
-  return <Html center>{progress} % loaded</Html>;
+  return  <Html center>{Math.round(progress)} % Chargé</Html>;
 }
 
 export default function App() {
@@ -49,26 +39,29 @@ const [doubt, setDoubt] = useState(false)
           height: "100vh",
           background: `no-repeat center/100% 100% url(${background})`,
         }}
-        pixelRatio={[1, 2]}
+        pixelRatio={[1, 1]}
      
-        camera={{ position: [0, 0, 10], fov: 30}}
+        camera={{ position: [2, 0, 10], fov: 28}}
       >
        
-        <ambientLight intensity={0.3} />
+        <ambientLight intensity={0} />
         {/* <spotLight intensity={0.5} position={[20, 50, 100]} color={"lightyellow"}   aoMapIntensity={1} /> */}
         {/* <pointLight intensity={1} position={[5, 5, 5]} decay={1} distance={300} shadow={1} color={"lightyellow"} /> */}
         <Suspense fallback={<Loader />}>
     
    <group >
-          <Model smile={smile} mouth={mouth} rock={rock} sad={sad} doubt={doubt}/>
-   <ReactModel scale={2} position={[-1, 0, 0]}/>
+          <Model smile={smile} mouth={mouth} rock={rock} sad={sad} doubt={doubt}
+         position={[0, 0, 0]} />
+   {/* <ReactModel scale={2} position={[-1, 0, 0]}/>
+   
    <Jslogo />
-   <Nodelogo/>
+   <Nodelogo/> */}
+
     </group>
 
           <Environment preset={'sunset'}/>
         </Suspense>
-        <OrbitControls autoRotate = {true} autoRotateSpeed = {0.2} />
+        <OrbitControls autoRotate = {true} autoRotateSpeed = {0.1} />
      
       </Canvas>
       

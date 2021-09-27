@@ -1,27 +1,24 @@
 {
   "files": {
-    "main.css": "/testface/static/css/main.2adc8f05.chunk.css",
-    "main.js": "/testface/static/js/main.c6b2299d.chunk.js",
-    "main.js.map": "/testface/static/js/main.c6b2299d.chunk.js.map",
+    "main.css": "/testface/static/css/main.7b35d2c6.chunk.css",
+    "main.js": "/testface/static/js/main.6ed904ff.chunk.js",
+    "main.js.map": "/testface/static/js/main.6ed904ff.chunk.js.map",
     "runtime-main.js": "/testface/static/js/runtime-main.09334332.js",
     "runtime-main.js.map": "/testface/static/js/runtime-main.09334332.js.map",
-    "static/js/2.53e76437.chunk.js": "/testface/static/js/2.53e76437.chunk.js",
-    "static/js/2.53e76437.chunk.js.map": "/testface/static/js/2.53e76437.chunk.js.map",
+    "static/js/2.8488bec1.chunk.js": "/testface/static/js/2.8488bec1.chunk.js",
+    "static/js/2.8488bec1.chunk.js.map": "/testface/static/js/2.8488bec1.chunk.js.map",
     "static/js/3.7136806e.chunk.js": "/testface/static/js/3.7136806e.chunk.js",
     "static/js/3.7136806e.chunk.js.map": "/testface/static/js/3.7136806e.chunk.js.map",
     "index.html": "/testface/index.html",
-    "static/css/main.2adc8f05.chunk.css.map": "/testface/static/css/main.2adc8f05.chunk.css.map",
-    "static/js/2.53e76437.chunk.js.LICENSE.txt": "/testface/static/js/2.53e76437.chunk.js.LICENSE.txt",
+    "static/css/main.7b35d2c6.chunk.css.map": "/testface/static/css/main.7b35d2c6.chunk.css.map",
+    "static/js/2.8488bec1.chunk.js.LICENSE.txt": "/testface/static/js/2.8488bec1.chunk.js.LICENSE.txt",
     "static/media/App.css": "/testface/static/media/340452.2f7b53cf.png",
-    "static/media/jslogo.a21ea10a.gltf": "/testface/static/media/jslogo.a21ea10a.gltf",
-    "static/media/newanimate.1b848ce8.gltf": "/testface/static/media/newanimate.1b848ce8.gltf",
-    "static/media/nodelogo.971876f3.gltf": "/testface/static/media/nodelogo.971876f3.gltf",
-    "static/media/react3dlogo.db0d8e08.gltf": "/testface/static/media/react3dlogo.db0d8e08.gltf"
+    "static/media/newanimate.1b848ce8.gltf": "/testface/static/media/newanimate.1b848ce8.gltf"
   },
   "entrypoints": [
     "static/js/runtime-main.09334332.js",
-    "static/js/2.53e76437.chunk.js",
-    "static/css/main.2adc8f05.chunk.css",
-    "static/js/main.c6b2299d.chunk.js"
+    "static/js/2.8488bec1.chunk.js",
+    "static/css/main.7b35d2c6.chunk.css",
+    "static/js/main.6ed904ff.chunk.js"
   ]
 }

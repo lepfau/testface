@@ -32,11 +32,6 @@ export default function App() {
     setMouth(true)
   }
 
-  useEffect(() => {
-setTimeout(() => {
-  setSmile(false)
-}, 6000);
-  },[smile])
 
 
   return (
@@ -112,10 +107,10 @@ setTimeout(() => {
             background: `no-repeat center/100% 100% url(${background})`,
             backgroundSize:"cover"
           }}
-          pixelRatio={[1, 1]}
+          pixelRatio={[1, 2]}
           camera={{ position: [2, 0, 10], fov: 28 }}
         >
-          <ambientLight intensity={0.2} />
+          <ambientLight intensity={0.7} />
           <Suspense fallback={<Loader />}>
             <group position={[0, 0,0]} scale={0.8}>
               <Medkit/>
@@ -130,7 +125,6 @@ setTimeout(() => {
         
             </group>
 
-            <Environment preset={"sunset"}  />
           </Suspense>
           <OrbitControls enableDamping={false} enablePan={false} autoRotate={true} autoRotateSpeed={rotateSpeed}  maxPolarAngle={1.5} minDistance={6} maxDistance={15}/>
         </Canvas>

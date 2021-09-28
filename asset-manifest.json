@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/testface/static/css/main.7b35d2c6.chunk.css",
-    "main.js": "/testface/static/js/main.37f516fb.chunk.js",
-    "main.js.map": "/testface/static/js/main.37f516fb.chunk.js.map",
+    "main.css": "/testface/static/css/main.543b47fa.chunk.css",
+    "main.js": "/testface/static/js/main.25e1ef57.chunk.js",
+    "main.js.map": "/testface/static/js/main.25e1ef57.chunk.js.map",
     "runtime-main.js": "/testface/static/js/runtime-main.09334332.js",
     "runtime-main.js.map": "/testface/static/js/runtime-main.09334332.js.map",
     "static/js/2.30211cbb.chunk.js": "/testface/static/js/2.30211cbb.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.7136806e.chunk.js": "/testface/static/js/3.7136806e.chunk.js",
     "static/js/3.7136806e.chunk.js.map": "/testface/static/js/3.7136806e.chunk.js.map",
     "index.html": "/testface/index.html",
-    "static/css/main.7b35d2c6.chunk.css.map": "/testface/static/css/main.7b35d2c6.chunk.css.map",
+    "static/css/main.543b47fa.chunk.css.map": "/testface/static/css/main.543b47fa.chunk.css.map",
     "static/js/2.30211cbb.chunk.js.LICENSE.txt": "/testface/static/js/2.30211cbb.chunk.js.LICENSE.txt",
     "static/media/App.css": "/testface/static/media/340452.2f7b53cf.png",
     "static/media/hdr.58f5fd9e.png": "/testface/static/media/hdr.58f5fd9e.png",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.09334332.js",
     "static/js/2.30211cbb.chunk.js",
-    "static/css/main.7b35d2c6.chunk.css",
-    "static/js/main.37f516fb.chunk.js"
+    "static/css/main.543b47fa.chunk.css",
+    "static/js/main.25e1ef57.chunk.js"
   ]
 }

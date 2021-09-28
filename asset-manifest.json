@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/testface/static/css/main.543b47fa.chunk.css",
-    "main.js": "/testface/static/js/main.f97b3bc1.chunk.js",
-    "main.js.map": "/testface/static/js/main.f97b3bc1.chunk.js.map",
-    "runtime-main.js": "/testface/static/js/runtime-main.09334332.js",
-    "runtime-main.js.map": "/testface/static/js/runtime-main.09334332.js.map",
-    "static/js/2.30211cbb.chunk.js": "/testface/static/js/2.30211cbb.chunk.js",
-    "static/js/2.30211cbb.chunk.js.map": "/testface/static/js/2.30211cbb.chunk.js.map",
-    "static/js/3.7136806e.chunk.js": "/testface/static/js/3.7136806e.chunk.js",
-    "static/js/3.7136806e.chunk.js.map": "/testface/static/js/3.7136806e.chunk.js.map",
+    "main.css": "/testface/static/css/main.183c4798.chunk.css",
+    "main.js": "/testface/static/js/main.59b07922.chunk.js",
+    "main.js.map": "/testface/static/js/main.59b07922.chunk.js.map",
+    "runtime-main.js": "/testface/static/js/runtime-main.e86130e8.js",
+    "runtime-main.js.map": "/testface/static/js/runtime-main.e86130e8.js.map",
+    "static/js/2.9662eabc.chunk.js": "/testface/static/js/2.9662eabc.chunk.js",
+    "static/js/2.9662eabc.chunk.js.map": "/testface/static/js/2.9662eabc.chunk.js.map",
+    "static/js/3.d0f95d1a.chunk.js": "/testface/static/js/3.d0f95d1a.chunk.js",
+    "static/js/3.d0f95d1a.chunk.js.map": "/testface/static/js/3.d0f95d1a.chunk.js.map",
     "index.html": "/testface/index.html",
-    "static/css/main.543b47fa.chunk.css.map": "/testface/static/css/main.543b47fa.chunk.css.map",
-    "static/js/2.30211cbb.chunk.js.LICENSE.txt": "/testface/static/js/2.30211cbb.chunk.js.LICENSE.txt",
+    "static/css/main.183c4798.chunk.css.map": "/testface/static/css/main.183c4798.chunk.css.map",
+    "static/js/2.9662eabc.chunk.js.LICENSE.txt": "/testface/static/js/2.9662eabc.chunk.js.LICENSE.txt",
     "static/media/App.css": "/testface/static/media/340452.2f7b53cf.png",
     "static/media/hdr.58f5fd9e.png": "/testface/static/media/hdr.58f5fd9e.png",
     "static/media/medkit.c4cfa25d.gltf": "/testface/static/media/medkit.c4cfa25d.gltf",
@@ -19,9 +19,9 @@
     "static/media/space.ddeee4ed.jpg": "/testface/static/media/space.ddeee4ed.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.09334332.js",
-    "static/js/2.30211cbb.chunk.js",
-    "static/css/main.543b47fa.chunk.css",
-    "static/js/main.f97b3bc1.chunk.js"
+    "static/js/runtime-main.e86130e8.js",
+    "static/js/2.9662eabc.chunk.js",
+    "static/css/main.183c4798.chunk.css",
+    "static/js/main.59b07922.chunk.js"
   ]
 }

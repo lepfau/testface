@@ -16,12 +16,27 @@ function Loader() {
 }
 
 export default function App() {
-  const [smile, setSmile] = useState(false);
+  const [smile, setSmile] = useState(true);
   const [mouth, setMouth] = useState(false);
   const [rock, setRock] = useState(false);
   const [sad, setSad] = useState(false);
   const [doubt, setDoubt] = useState(false);
+  const [rotateSpeed, setRotateSpeed] = useState(0.2)
 
+
+  const headRotation = () => {
+    setRotateSpeed(100)
+    setTimeout(() => {
+      setRotateSpeed(0.2)
+    }, 1000);
+    setMouth(true)
+  }
+
+  useEffect(() => {
+setTimeout(() => {
+  setSmile(false)
+}, 6000);
+  },[smile])
 
 
   return (
@@ -95,6 +110,7 @@ export default function App() {
           style={{
             height: "100vh",
             background: `no-repeat center/100% 100% url(${background})`,
+            backgroundSize:"cover"
           }}
           pixelRatio={[1, 1]}
           camera={{ position: [2, 0, 10], fov: 28 }}
@@ -103,7 +119,7 @@ export default function App() {
           <Suspense fallback={<Loader />}>
             <group position={[0, 0,0]} scale={0.8}>
               <Medkit/>
-              <Model
+              <Model onDoubleClick ={() => headRotation()}
                 smile={smile}
                 mouth={mouth}
                 rock={rock}
@@ -116,7 +132,7 @@ export default function App() {
 
             <Environment preset={"sunset"}  />
           </Suspense>
-          <OrbitControls autoRotate={true} autoRotateSpeed={0.1} minZoom={2} />
+          <OrbitControls autoRotate={true} autoRotateSpeed={rotateSpeed}  maxPolarAngle={1.5} minDistance={6} maxDistance={15}/>
         </Canvas>
       </div>
     </HashRouter>

@@ -132,7 +132,7 @@ setTimeout(() => {
 
             <Environment preset={"sunset"}  />
           </Suspense>
-          <OrbitControls autoRotate={true} autoRotateSpeed={rotateSpeed}  maxPolarAngle={1.5} minDistance={6} maxDistance={15}/>
+          <OrbitControls enableDamping={false} enablePan={false} autoRotate={true} autoRotateSpeed={rotateSpeed}  maxPolarAngle={1.5} minDistance={6} maxDistance={15}/>
         </Canvas>
       </div>
     </HashRouter>

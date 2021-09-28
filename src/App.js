@@ -39,7 +39,7 @@ export default function App() {
       <div>
  
         <div className="btn_container">
-          <Button
+          <Button style={{margin:"5px", textTransform:"capitalize"}}
             onClick={() => {
               setSmile(!smile);
               setMouth(false);
@@ -51,7 +51,7 @@ export default function App() {
           >
             Content
           </Button>
-          <Button
+          <Button  style={{margin:"5px", textTransform:"capitalize"}}
             onClick={() => {
               setMouth(!mouth);
               setSmile(false);
@@ -63,7 +63,7 @@ export default function App() {
           >
             Choqué
           </Button>
-          <Button
+          <Button  style={{margin:"5px", textTransform:"capitalize"}}
             onClick={() => {
               setRock(!rock);
               setSmile(false);
@@ -73,9 +73,9 @@ export default function App() {
             }}
             variant="contained"
           >
-            The Rock
+            Doute
           </Button>
-          <Button
+          <Button  style={{margin:"5px", textTransform:"capitalize"}}
             onClick={() => {
               setSad(!sad);
               setSmile(false);
@@ -87,7 +87,7 @@ export default function App() {
           >
             Triste
           </Button>
-          <Button
+          <Button style={{margin:"5px", textTransform:"capitalize"}}
             onClick={() => {
               setDoubt(!doubt);
               setSmile(false);
@@ -97,7 +97,7 @@ export default function App() {
             }}
             variant="contained"
           >
-            Doute
+            Méfiant
           </Button>
         </div>
         <Canvas

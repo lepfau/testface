@@ -53,16 +53,14 @@ export default function Model({ ...props }) {
   });
 
   return (
-    <group ref={group} {...props} dispose={null} position={props.position} scale={1.3}>
+    <group ref={group} {...props} dispose={null} position={props.position} scale={1.4}>
 
-        <mesh
-          
+        <mesh 
           name="FaceBuilderHead_mesh"
           geometry={nodes.FaceBuilderHead_mesh.geometry}
-          material={materials.kt_facebuilder_material}
+          material={materials.kt_facebuilder_material} 
           morphTargetDictionary={nodes.FaceBuilderHead_mesh.morphTargetDictionary}
           morphTargetInfluences={nodes.FaceBuilderHead_mesh.morphTargetInfluences}
-
         />
         <mesh
           name="FaceBuilderHead_mesh_1"

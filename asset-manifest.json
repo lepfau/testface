@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/testface/static/css/main.2c7b7e33.chunk.css",
-    "main.js": "/testface/static/js/main.f27ccc8b.chunk.js",
-    "main.js.map": "/testface/static/js/main.f27ccc8b.chunk.js.map",
+    "main.css": "/testface/static/css/main.4aa08f30.chunk.css",
+    "main.js": "/testface/static/js/main.bdbbd8e2.chunk.js",
+    "main.js.map": "/testface/static/js/main.bdbbd8e2.chunk.js.map",
     "runtime-main.js": "/testface/static/js/runtime-main.09334332.js",
     "runtime-main.js.map": "/testface/static/js/runtime-main.09334332.js.map",
     "static/js/2.30211cbb.chunk.js": "/testface/static/js/2.30211cbb.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.7136806e.chunk.js": "/testface/static/js/3.7136806e.chunk.js",
     "static/js/3.7136806e.chunk.js.map": "/testface/static/js/3.7136806e.chunk.js.map",
     "index.html": "/testface/index.html",
-    "static/css/main.2c7b7e33.chunk.css.map": "/testface/static/css/main.2c7b7e33.chunk.css.map",
+    "static/css/main.4aa08f30.chunk.css.map": "/testface/static/css/main.4aa08f30.chunk.css.map",
     "static/js/2.30211cbb.chunk.js.LICENSE.txt": "/testface/static/js/2.30211cbb.chunk.js.LICENSE.txt",
     "static/media/evening_meadow_4k.9c7be875.hdr": "/testface/static/media/evening_meadow_4k.9c7be875.hdr",
     "static/media/medkit.c4cfa25d.gltf": "/testface/static/media/medkit.c4cfa25d.gltf",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.09334332.js",
     "static/js/2.30211cbb.chunk.js",
-    "static/css/main.2c7b7e33.chunk.css",
-    "static/js/main.f27ccc8b.chunk.js"
+    "static/css/main.4aa08f30.chunk.css",
+    "static/js/main.bdbbd8e2.chunk.js"
   ]
 }

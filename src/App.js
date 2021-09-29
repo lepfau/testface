@@ -9,7 +9,7 @@ import Medkit from "./Medkit";
 import { Light } from "three";
 import "./App.css";
 import Button from "@mui/material/Button";
-import hdr from "./hdr.png";
+import hdr from "./evening_meadow_4k.hdr";
 
 function Loader() {
   const { progress } = useProgress();
@@ -118,17 +118,17 @@ export default function App() {
           
         >
         
-          <ambientLight intensity={0.3} position={[2, 0, 0]}/>
+          <ambientLight intensity={0.3} />
           {/* <ambientLightProbe  intensity={1}/> */}
-<directionalLight position={[0.5, 0, 0.866]} intensity={0.4}/>
+{/* <directionalLight position={[0.5, 0, 0.866]} intensity={0.2}/> */}
           {/* <spotLight position={[3, 3, 3]}  intensity={1}/> */}
           {/* <pointLight position={[-2,0, -2]}  intensity={1}/> */}
-          <hemisphereLight position={[0, 0, 0]} intensity={0.1} />
+          {/* <hemisphereLight position={[0, 0, 0]} intensity={0.2} /> */}
           
         
           <Suspense fallback={<Loader />}>
-            <group position={[0, 0, 0]} >
           
+          <Environment files={hdr} position={[0, 0, 0]} background={true} />
               <Model
                 onDoubleClick={() => headRotation()}
                 smile={smile}
@@ -139,11 +139,11 @@ export default function App() {
                 position={[0, 0, 0]}
               />
           
-            </group>
+     
           </Suspense>
    
           <OrbitControls
-            enableDamping={false}
+           
             enablePan={false}
             autoRotate={true}
             autoRotateSpeed={rotateSpeed}

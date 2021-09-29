@@ -16,15 +16,14 @@ function Loader() {
   return <Html center>{Math.round(progress)} % Chargé</Html>;
 }
 
-
-
 export default function App() {
   const [smile, setSmile] = useState(false);
   const [mouth, setMouth] = useState(false);
   const [rock, setRock] = useState(false);
   const [sad, setSad] = useState(false);
   const [doubt, setDoubt] = useState(false);
-  const [rotateSpeed, setRotateSpeed] = useState(0.2);
+  const [rotateSpeed, setRotateSpeed] = useState(0.1);
+  const [wireFrame, setWireFrame] = useState(false);
 
   const headRotation = () => {
     setRotateSpeed(100);
@@ -33,8 +32,6 @@ export default function App() {
     }, 1000);
     setMouth(true);
   };
-
-
 
   return (
     <HashRouter>
@@ -105,6 +102,15 @@ export default function App() {
           >
             Méfiant
           </Button>
+          <Button
+            style={{ margin: "5px", textTransform: "capitalize" }}
+            onClick={() => {
+              setWireFrame(!wireFrame);
+            }}
+            variant="contained"
+          >
+            Wireframe
+          </Button>
         </div>
         <Canvas
           className="canvasstyle"
@@ -114,36 +120,37 @@ export default function App() {
             backgroundSize: "cover",
           }}
           pixelRatio={[1, 2]}
-          camera={{ position: [2, 0, 10], fov: 30 }}
-          
+          camera={{ position: [0, 0, 10], fov: 30 }}
         >
-        
           <ambientLight intensity={0.3} />
           {/* <ambientLightProbe  intensity={1}/> */}
-{/* <directionalLight position={[0.5, 0, 0.866]} intensity={0.2}/> */}
+          {/* <directionalLight position={[0.5, 0, 0.866]} intensity={0.2}/> */}
           {/* <spotLight position={[3, 3, 3]}  intensity={1}/> */}
           {/* <pointLight position={[-2,0, -2]}  intensity={1}/> */}
           {/* <hemisphereLight position={[0, 0, 0]} intensity={0.2} /> */}
-          
-        
+
           <Suspense fallback={<Loader />}>
-          
-          <Environment files={hdr} position={[0, 0, 0]} background={true} />
-              <Model
-                onDoubleClick={() => headRotation()}
-                smile={smile}
-                mouth={mouth}
-                rock={rock}
-                sad={sad}
-                doubt={doubt}
-                position={[0, 0, 0]}
-              />
-          
-     
+            <Environment files={hdr} position={[0, 0, 0]} background={true} />
+            <Model
+              onDoubleClick={() => headRotation()}
+              smile={smile}
+              mouth={mouth}
+              rock={rock}
+              sad={sad}
+              doubt={doubt}
+              position={[0, -0.2, 0]}
+            />
+
+            {wireFrame ? <Model wireFrame={wireFrame}      onDoubleClick={() => headRotation()}
+              smile={smile}
+              mouth={mouth}
+              rock={rock}
+              sad={sad}
+              doubt={doubt}
+              position={[0, -0.2, 0]} /> : null}
           </Suspense>
-   
+
           <OrbitControls
-           
             enablePan={false}
             autoRotate={true}
             autoRotateSpeed={rotateSpeed}
@@ -151,8 +158,6 @@ export default function App() {
             minDistance={6}
             maxDistance={15}
           />
-
-          
         </Canvas>
       </div>
     </HashRouter>

@@ -68,7 +68,11 @@ export default function Model({ ...props }) {
         receiveShadow={true}
         shadowMap={true}
         castShadow={true}
-        />  
+        >  
+    {props.wireFrame ? <meshBasicMaterial wireframe /> : null}
+        {/* <meshBasicMaterial wireframe /> */}
+      
+        </mesh>
      
         
         <mesh

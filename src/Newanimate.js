@@ -56,7 +56,7 @@ export default function Model({ ...props }) {
 
   return (
 
-    <group ref={group} {...props} dispose={null} position={props.position} scale={1.4}>
+    <group scale={1.5} ref={group} {...props} dispose={null} position={props.position} >
 
         <mesh 
           name="FaceBuilderHead_mesh"

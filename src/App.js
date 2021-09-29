@@ -3,7 +3,7 @@ import { HashRouter } from "react-router-dom";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Effects } from "@react-three/drei";
 import background from "./space.jpg";
-import { Html, useProgress, CameraShake } from "@react-three/drei";
+import { Html, useProgress, Environment } from "@react-three/drei";
 import Model from "./Newanimate";
 import Medkit from "./Medkit";
 import { Light } from "three";
@@ -114,19 +114,21 @@ export default function App() {
             backgroundSize: "cover",
           }}
           pixelRatio={[1, 2]}
-          camera={{ position: [2, 0, 10], fov: 28 }}
+          camera={{ position: [2, 0, 10], fov: 30 }}
           
         >
         
-          {/* <ambientLight intensity={1} position={[2, 0, 0]}/> */}
+          <ambientLight intensity={0.3} position={[2, 0, 0]}/>
           {/* <ambientLightProbe  intensity={1}/> */}
-
+<directionalLight position={[0.5, 0, 0.866]} intensity={0.4}/>
           {/* <spotLight position={[3, 3, 3]}  intensity={1}/> */}
           {/* <pointLight position={[-2,0, -2]}  intensity={1}/> */}
-          <hemisphereLight position={[-50, 50, 50]} intensity={0.5} />
-
+          <hemisphereLight position={[0, 0, 0]} intensity={0.1} />
+          
+        
           <Suspense fallback={<Loader />}>
-            <group position={[0, 0, 0]} scale={0.8}>
+            <group position={[0, 0, 0]} >
+          
               <Model
                 onDoubleClick={() => headRotation()}
                 smile={smile}
@@ -136,9 +138,10 @@ export default function App() {
                 doubt={doubt}
                 position={[0, 0, 0]}
               />
+          
             </group>
           </Suspense>
-         
+   
           <OrbitControls
             enableDamping={false}
             enablePan={false}

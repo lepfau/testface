@@ -1,0 +1,11 @@
+.btn_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  margin-top: 15px;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+}
+

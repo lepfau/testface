@@ -2,18 +2,15 @@ import React, { Suspense, useState, useEffect } from "react";
 import { HashRouter } from "react-router-dom";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Effects } from "@react-three/drei";
-import background from "./space.jpg";
 import { Html, useProgress, Environment } from "@react-three/drei";
 import Model from "./Newanimate";
-import Medkit from "./Medkit";
-import { Light } from "three";
 import "./App.css";
 import Button from "@mui/material/Button";
 import hdr from "./evening_meadow_4k.hdr";
 
 function Loader() {
   const { progress } = useProgress();
-  return <Html center>{Math.round(progress)} % Chargé</Html>;
+  return <Html center style={{color:"white", width:"150px",  fontSize:"15px"}}>{Math.round(progress)} % Chargé</Html>;
 }
 
 export default function App() {
@@ -23,7 +20,7 @@ export default function App() {
   const [sad, setSad] = useState(false);
   const [doubt, setDoubt] = useState(false);
   const [rotateSpeed, setRotateSpeed] = useState(0.1);
-  const [wireFrame, setWireFrame] = useState(false);
+  
 
   const headRotation = () => {
     setRotateSpeed(100);
@@ -102,25 +99,16 @@ export default function App() {
           >
             Méfiant
           </Button>
-          <Button
-            style={{ margin: "5px", textTransform: "capitalize" }}
-            onClick={() => {
-              setWireFrame(!wireFrame);
-            }}
-            variant="contained"
-          >
-            Wireframe
-          </Button>
+
         </div>
         <Canvas
           className="canvasstyle"
           style={{
             height: "100vh",
-            background: `no-repeat center/100% 100% url(${background})`,
-            backgroundSize: "cover",
+            backgroundColor:'black'
           }}
           pixelRatio={[1, 2]}
-          camera={{ position: [0, 0, 10], fov: 30 }}
+          camera={{ position: [0, 0, 10], fov: 25 }}
         >
           <ambientLight intensity={0.3} />
           {/* <ambientLightProbe  intensity={1}/> */}
@@ -130,7 +118,7 @@ export default function App() {
           {/* <hemisphereLight position={[0, 0, 0]} intensity={0.2} /> */}
 
           <Suspense fallback={<Loader />}>
-            <Environment files={hdr} position={[0, 0, 0]} background={true} />
+            <Environment files={hdr} background={true} />
             <Model
               onDoubleClick={() => headRotation()}
               smile={smile}
@@ -141,13 +129,7 @@ export default function App() {
               position={[0, -0.2, 0]}
             />
 
-            {wireFrame ? <Model wireFrame={wireFrame}      onDoubleClick={() => headRotation()}
-              smile={smile}
-              mouth={mouth}
-              rock={rock}
-              sad={sad}
-              doubt={doubt}
-              position={[0, -0.2, 0]} /> : null}
+    
           </Suspense>
 
           <OrbitControls

@@ -4,7 +4,7 @@ import { OrbitControls } from "@react-three/drei";
 import { Html, useProgress, Environment } from "@react-three/drei";
 
 import Model from "../components/Newanimate";
-import hdr from "../assets/evening_meadow_4k.hdr";
+import hdr from "../assets/hdr.hdr";
 
 function CanvasPart(props) {
   const { smile, mouth, rock, sad, doubt, rotateSpeed, headRotation } = props;
@@ -25,9 +25,9 @@ function CanvasPart(props) {
         backgroundColor: "black",
       }}
       pixelRatio={[1, 2]}
-      camera={{ position: [0, 0, 10], fov: 25 }}
+      camera={{ position: [0, 0, 10], fov: 30 }}
     >
-      <ambientLight intensity={0.3} />
+      {/* <ambientLight intensity={0.3} /> */}
 
       <Suspense fallback={<Loader />}>
         <Environment files={hdr} background={true} />
@@ -39,6 +39,7 @@ function CanvasPart(props) {
           sad={sad}
           doubt={doubt}
           position={[0, -0.2, 0]}
+          
         />
       </Suspense>
 

@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/testface/static/css/main.9e23eae7.chunk.css",
-    "main.js": "/testface/static/js/main.32bff887.chunk.js",
-    "main.js.map": "/testface/static/js/main.32bff887.chunk.js.map",
+    "main.js": "/testface/static/js/main.d1cdd7b2.chunk.js",
+    "main.js.map": "/testface/static/js/main.d1cdd7b2.chunk.js.map",
     "runtime-main.js": "/testface/static/js/runtime-main.09334332.js",
     "runtime-main.js.map": "/testface/static/js/runtime-main.09334332.js.map",
     "static/js/2.e1dc9571.chunk.js": "/testface/static/js/2.e1dc9571.chunk.js",
@@ -12,13 +12,13 @@
     "index.html": "/testface/index.html",
     "static/css/main.9e23eae7.chunk.css.map": "/testface/static/css/main.9e23eae7.chunk.css.map",
     "static/js/2.e1dc9571.chunk.js.LICENSE.txt": "/testface/static/js/2.e1dc9571.chunk.js.LICENSE.txt",
-    "static/media/evening_meadow_4k.9c7be875.hdr": "/testface/static/media/evening_meadow_4k.9c7be875.hdr",
+    "static/media/hdr.dde9c4d1.hdr": "/testface/static/media/hdr.dde9c4d1.hdr",
     "static/media/newanimate.1b848ce8.gltf": "/testface/static/media/newanimate.1b848ce8.gltf"
   },
   "entrypoints": [
     "static/js/runtime-main.09334332.js",
     "static/js/2.e1dc9571.chunk.js",
     "static/css/main.9e23eae7.chunk.css",
-    "static/js/main.32bff887.chunk.js"
+    "static/js/main.d1cdd7b2.chunk.js"
   ]
 }

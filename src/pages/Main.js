@@ -9,7 +9,7 @@ function Main() {
   const [rock, setRock] = useState(false);
   const [sad, setSad] = useState(false);
   const [doubt, setDoubt] = useState(false);
-  const [rotateSpeed, setRotateSpeed] = useState(0);
+  const [rotateSpeed, setRotateSpeed] = useState(0.12);
   const [first, setFirst] = useState(false);
   const [second, setSecond] = useState(false);
   const [third, setThird] = useState(false);

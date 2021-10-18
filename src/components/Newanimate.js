@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { useGLTF, useAnimations } from "@react-three/drei";
+import { useGLTF, useAnimations, Effects } from "@react-three/drei";
 import face from "../assets/newanimate.gltf";
 
 export default function Model({ ...props }) {
@@ -39,14 +39,7 @@ export default function Model({ ...props }) {
       actions.sad.fadeOut(0.5);
     }
 
-    if (props.doubt === true) {
-      actions.Perplex.repetitions = 1;
-      actions.Perplex.clampWhenFinished = true;
-      actions.Perplex.reset().fadeIn(0.5).play();
-    } else {
-      actions.Perplex.fadeOut(0.5);
-    }
-  });
+   });
 
   return (
     <group
@@ -56,6 +49,7 @@ export default function Model({ ...props }) {
       dispose={null}
       position={props.position}
     >
+       
       <mesh
         name="FaceBuilderHead_mesh"
         geometry={nodes.FaceBuilderHead_mesh.geometry}
@@ -64,9 +58,9 @@ export default function Model({ ...props }) {
         morphTargetInfluences={nodes.FaceBuilderHead_mesh.morphTargetInfluences}
         receiveShadow={true}
         shadowMap={true}
-        castShadow={true}
+        castShadow={false}
       >
-        {props.wireFrame ? <meshBasicMaterial wireframe /> : null}
+  
       </mesh>
 
       <mesh

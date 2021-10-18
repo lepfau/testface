@@ -1,13 +1,15 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { Html, useProgress, Environment } from "@react-three/drei";
+import { Html, useProgress, Environment} from "@react-three/drei";
 
 import Model from "../components/Newanimate";
+import Switches from "../components/Switches"
 import hdr from "../assets/hdr.hdr";
 
+
 function CanvasPart(props) {
-  const { smile, mouth, rock, sad, doubt, rotateSpeed, headRotation } = props;
+  const {fourth, fourthSwitch, third, thirdSwitch, second, secondSwitch, first, firstSwitch, smile, mouth, rock, sad, doubt, rotateSpeed, headRotation } = props;
 
   function Loader() {
     const { progress } = useProgress();
@@ -18,19 +20,23 @@ function CanvasPart(props) {
     );
   }
 
+
   return (
+  
     <Canvas
       style={{
         height: "100vh",
         backgroundColor: "black",
       }}
       pixelRatio={[1, 2]}
-      camera={{ position: [0, 0, 10], fov: 30 }}
+      camera={{ position: [0, -2, 10], fov: 35 }}
     >
       {/* <ambientLight intensity={0.3} /> */}
 
       <Suspense fallback={<Loader />}>
         <Environment files={hdr} background={true} />
+   
+
         <Model
           onDoubleClick={() => headRotation()}
           smile={smile}
@@ -38,10 +44,11 @@ function CanvasPart(props) {
           rock={rock}
           sad={sad}
           doubt={doubt}
-          position={[0, -0.2, 0]}
+          position={[0, 0.8, 0]}
           
         />
-      </Suspense>
+<Switches firstSwitch={firstSwitch} first={first} secondSwitch={secondSwitch} second={second} third={third} thirdSwitch={thirdSwitch} fourth={fourth} fourthSwitch={fourthSwitch}/>
+         </Suspense>
 
       <OrbitControls
         enablePan={false}
@@ -52,6 +59,7 @@ function CanvasPart(props) {
         maxDistance={15}
       />
     </Canvas>
+
   );
 }
 

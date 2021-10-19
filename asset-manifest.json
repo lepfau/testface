@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/testface/static/css/main.9e23eae7.chunk.css",
-    "main.js": "/testface/static/js/main.b173f3be.chunk.js",
-    "main.js.map": "/testface/static/js/main.b173f3be.chunk.js.map",
+    "main.js": "/testface/static/js/main.bd42adcf.chunk.js",
+    "main.js.map": "/testface/static/js/main.bd42adcf.chunk.js.map",
     "runtime-main.js": "/testface/static/js/runtime-main.a3b620fc.js",
     "runtime-main.js.map": "/testface/static/js/runtime-main.a3b620fc.js.map",
     "static/js/2.fa8b8226.chunk.js": "/testface/static/js/2.fa8b8226.chunk.js",
@@ -14,12 +14,12 @@
     "static/js/2.fa8b8226.chunk.js.LICENSE.txt": "/testface/static/js/2.fa8b8226.chunk.js.LICENSE.txt",
     "static/media/hdr.dde9c4d1.hdr": "/testface/static/media/hdr.dde9c4d1.hdr",
     "static/media/newanimate.1b848ce8.gltf": "/testface/static/media/newanimate.1b848ce8.gltf",
-    "static/media/switches.6f66d402.gltf": "/testface/static/media/switches.6f66d402.gltf"
+    "static/media/newswitched.8d0f4f7f.gltf": "/testface/static/media/newswitched.8d0f4f7f.gltf"
   },
   "entrypoints": [
     "static/js/runtime-main.a3b620fc.js",
     "static/js/2.fa8b8226.chunk.js",
     "static/css/main.9e23eae7.chunk.css",
-    "static/js/main.b173f3be.chunk.js"
+    "static/js/main.bd42adcf.chunk.js"
   ]
 }

@@ -4,7 +4,7 @@ import { OrbitControls } from "@react-three/drei";
 import { Html, useProgress, Environment} from "@react-three/drei";
 
 import Model from "../components/Newanimate";
-import Switches from "../components/Switches"
+import Switches from "../components/Newswitched"
 import hdr from "../assets/hdr.hdr";
 
 
@@ -29,7 +29,7 @@ function CanvasPart(props) {
         backgroundColor: "black",
       }}
       pixelRatio={[1, 2]}
-      camera={{ position: [0, -2, 10], fov: 35 }}
+      camera={{ position: [0, -2, 10], fov: 32 }}
     >
       {/* <ambientLight intensity={0.3} /> */}
 
@@ -45,6 +45,7 @@ function CanvasPart(props) {
           sad={sad}
           doubt={doubt}
           position={[0, 0.8, 0]}
+        
           
         />
 <Switches firstSwitch={firstSwitch} first={first} secondSwitch={secondSwitch} second={second} third={third} thirdSwitch={thirdSwitch} fourth={fourth} fourthSwitch={fourthSwitch}/>

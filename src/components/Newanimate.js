@@ -19,7 +19,8 @@ export default function Model({ ...props }) {
       actions.Smile.repetitions = 1;
       actions.Smile.clampWhenFinished = true;
       actions.Smile.reset().fadeIn(0.5).play();
-    } else {
+    } 
+    else {
       actions.Smile.fadeOut(0.5);
     }
 
@@ -28,7 +29,7 @@ export default function Model({ ...props }) {
       actions.Therock.clampWhenFinished = true;
       actions.Therock.reset().fadeIn(0.5).play();
     } else {
-      actions.Therock.fadeOut(0.5);
+      actions.Therock.fadeOut();
     }
 
     if (props.sad === true) {
@@ -36,7 +37,7 @@ export default function Model({ ...props }) {
       actions.sad.clampWhenFinished = true;
       actions.sad.reset().fadeIn(0.5).play();
     } else {
-      actions.sad.fadeOut(0.5);
+      actions.sad.fadeOut()
     }
 
    });
@@ -48,6 +49,7 @@ export default function Model({ ...props }) {
       {...props}
       dispose={null}
       position={props.position}
+ 
     >
        
       <mesh
@@ -59,6 +61,7 @@ export default function Model({ ...props }) {
         receiveShadow={true}
         shadowMap={true}
         castShadow={false}
+        
       >
   
       </mesh>

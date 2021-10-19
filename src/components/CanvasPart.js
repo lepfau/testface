@@ -1,8 +1,8 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { Html, useProgress, Environment} from "@react-three/drei";
-
+import LinearProgress from '@mui/material/LinearProgress';
 import Model from "../components/Newanimate";
 import Switches from "../components/Newswitched"
 import hdr from "../assets/hdr.hdr";
@@ -11,14 +11,19 @@ import hdr from "../assets/hdr.hdr";
 function CanvasPart(props) {
   const {fourth, fourthSwitch, third, thirdSwitch, second, secondSwitch, first, firstSwitch, smile, mouth, rock, sad, doubt, rotateSpeed, headRotation } = props;
 
+  const { progress } = useProgress();
+
+
   function Loader() {
-    const { progress } = useProgress();
-    return (
-      <Html center style={{ color: "white", width: "150px", fontSize: "15px" }}>
-        {Math.round(progress)} % Chargé
+     return (
+      <Html center style={{ color: "white", fontSize: "15px", width:"300px" }}>
+        {Math.round(progress)} %
+        <LinearProgress variant="determinate" value={progress}/>
       </Html>
     );
   }
+
+
 
 
   return (
@@ -33,9 +38,9 @@ function CanvasPart(props) {
     >
       {/* <ambientLight intensity={0.3} /> */}
 
-      <Suspense fallback={<Loader />}>
+      <Suspense fallback={<Loader/>}>
         <Environment files={hdr} background={true} />
-   
+       
 
         <Model
           onDoubleClick={() => headRotation()}
